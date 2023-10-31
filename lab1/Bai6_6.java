@@ -87,3 +87,4 @@ public class Bai6_6 {
             System.out.println();
         }
     }
+}
