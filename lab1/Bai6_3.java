@@ -1,6 +1,6 @@
 // 6.3 Write a program to display a triangle with a height of n stars (*), n is entered by users.
 
-package lab1;
+// package lab1;
 
 import java.util.Scanner;
 
