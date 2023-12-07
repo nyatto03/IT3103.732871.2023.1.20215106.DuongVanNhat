@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import media.*;
+
 public class Aims {
 
     private static Store store = new Store();
@@ -7,27 +7,30 @@ public class Aims {
 
     public static void main(String[] args) {
 
-        showMenu();
-
-        Scanner scanner = new Scanner(System.in);
-        int choice = scanner.nextInt();
-
-        while (choice != 0) {
-
-            switch (choice) {
-                case 1:
-                    viewStoreMenu();
-                    break;
-                case 2:
-                    updateStoreMenu();
-                    break;
-                case 3:
-                    viewCartMenu();
-                    break;
-            }
+        try (Scanner scanner = new Scanner(System.in)) {
 
             showMenu();
-            choice = scanner.nextInt();
+
+            int choice = scanner.nextInt();
+
+            while (choice != 0) {
+
+                switch (choice) {
+                    case 1:
+                        viewStoreMenu();
+                        break;
+                    case 2:
+                        updateStoreMenu();
+                        break;
+                    case 3:
+                        viewCartMenu();
+                        break;
+                }
+
+                showMenu();
+                choice = scanner.nextInt();
+
+            }
 
         }
 
@@ -35,21 +38,40 @@ public class Aims {
 
     }
 
-    // Menu methods
-
     public static void showMenu() {
-        // Display main menu
+        // display main menu options
     }
 
     public static void viewStoreMenu() {
-        // Display store menu
+        // display store items
+        displayStoreSubmenu();
+    }
+
+    public static void updateStoreMenu() {
+        // add/remove items from store
     }
 
     public static void viewCartMenu() {
-        // Display cart menu
+        // display cart items
+        displayCartSubmenu();
     }
 
-    // Other methods to handle each menu option
-    // e.g. add/remove from store/cart, view details, filter, sort etc
+    public static void displayStoreSubmenu() {
+        // display store submenu options
+    }
+
+    public static void displayCartSubmenu() {
+        // display cart submenu options
+    }
+
+    public static void addToCart() {
+        // add item to cart
+    }
+
+    public static void removeFromCart() {
+        // remove item from cart
+    }
+
+    // other methods
 
 }
